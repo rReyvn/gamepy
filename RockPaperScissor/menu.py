@@ -49,7 +49,7 @@ class MainMenu(Menu):
 
     def menuAction(self):
         if self.menu_choice == 1:
-            self.__init__()
+            return
         if self.menu_choice == 2:
             SettingMenu()
             self.__init__()

@@ -1,3 +1,15 @@
 class Player:
     name = "Player"
-    score = 0
+
+    def __init__(self):
+        self.move = None
+
+    def choose_move(self, move):
+        self.move = move
+
+
+class Computer(Player):
+    name = "Computer"
+
+    def __init__(self):
+        self.move = None
