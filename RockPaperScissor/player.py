@@ -10,6 +10,3 @@ class Player:
 
 class Computer(Player):
     name = "Computer"
-
-    def __init__(self):
-        self.move = None

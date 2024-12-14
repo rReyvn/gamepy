@@ -20,16 +20,12 @@ class Game:
 
         print(self.check_winner())
 
-        sleep(3)
+        sleep(1.5)
 
     def check_winner(self):
         if self.player1.move == self.player2.move:
             return "Tie!"
-        elif (
-            (self.player1.move == Move.ROCK and self.player2.move == Move.SCISSOR)
-            or (self.player1.move == Move.PAPER and self.player2.move == Move.ROCK)
-            or (self.player1.move == Move.SCISSOR and self.player2.move == Move.PAPER)
-        ):
-            return f"{self.player1.name} Win!"
+        elif Move.check(self.player1.move, self.player2.move):
+            return f"{self.player1.name} win!"
         else:
-            return f"{self.player2.name} Win!"
+            return f"{self.player2.name} win!"
